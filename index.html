@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneTech - New Era of Technology & Electronics</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast_container" class="flash-messages"></div>
+
+    <!-- Top Bar -->
+    <div class="top_bar">
+        <div class="container">
+            <div class="top_bar_content">
+                <div class="top_bar_contact">
+                    <div class="top_bar_item">
+                        <i class="fas fa-phone-alt"></i> +1 (800) 555-0199
+                    </div>
+                    <div class="top_bar_item">
+                        <i class="fas fa-envelope"></i> <a href="mailto:support@onetech.com">support@onetech.com</a>
+                    </div>
+                </div>
+                <div class="top_bar_user">
+                    <div class="top_bar_item">
+                        <i class="fas fa-globe"></i> English ($ USD)
+                    </div>
+                    <div class="top_bar_item">
+                        <i class="fas fa-user"></i> <a href="#">Sign In / Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Main -->
+    <header class="header_main">
+        <div class="container">
+            <div class="header_main_row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">One<span>Tech</span></a>
+                </div>
+
+                <!-- Search Form -->
+                <div class="header_search">
+                    <form action="shop.html" method="GET" class="header_search_form">
+                        <input type="search" name="q" class="header_search_input" placeholder="Search for smartphones, laptops, cameras...">
+                        <select name="category" class="search_category_select">
+                            <option value="">All Categories</option>
+                            <option value="smartphones">Smartphones & Tablets</option>
+                            <option value="laptops">Computers & Laptops</option>
+                            <option value="cameras">Cameras & Photos</option>
+                            <option value="audio">TV & Audio</option>
+                        </select>
+                        <button type="submit" class="header_search_btn"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+                <!-- Wishlist & Cart -->
+                <div class="header_right_icons">
+                    <div class="icon_box" onclick="window.location.href='shop.html'">
+                        <div class="icon_wrapper">
+                            <i class="far fa-heart"></i>
+                            <span id="wishlist_count" class="icon_badge">0</span>
+                        </div>
+                        <div>
+                            <div class="icon_text_label">Wishlist</div>
+                            <div class="icon_text_val">Saved</div>
+                        </div>
+                    </div>
+
+                    <div class="icon_box" onclick="window.location.href='cart.html'">
+                        <div class="icon_wrapper">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span id="cart_count" class="icon_badge">0</span>
+                        </div>
+                        <div>
+                            <div class="icon_text_label">Cart</div>
+                            <div id="cart_total_header" class="icon_text_val">$0.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main_nav">
+        <div class="container">
+            <div class="main_nav_row">
+                <!-- Categories Dropdown Menu -->
+                <div class="cat_menu_container">
+                    <div class="cat_menu_title">
+                        <i class="fas fa-bars"></i> Categories
+                    </div>
+                    <ul class="cat_menu"></ul>
+                </div>
+
+                <!-- Nav Links -->
+                <ul class="main_nav_links">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="shop.html?on_sale=true">Super Deals</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Body -->
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero_banner">
+            <div class="container">
+                <div class="hero_banner_row">
+                    <div class="hero_content">
+                        <span class="hero_tag">Flagship Smartphone</span>
+                        <h1 class="hero_title">New Era of Smartphones: iPhone 15 Pro</h1>
+                        <p style="color:#cbd5e1; margin-bottom:20px; font-size:16px;">Titanium frame, A17 Pro Chip, 48MP Camera system, and ProMotion 120Hz display.</p>
+                        <div class="hero_price">$1,199 <span>$1,299</span></div>
+                        <a href="product_detail.html?id=1" class="btn_primary">Shop Now <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="hero_image">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&auto=format&fit=crop&q=80" alt="iPhone 15 Pro">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Characteristics -->
+        <section class="characteristics">
+            <div class="container">
+                <div class="char_grid">
+                    <div class="char_item">
+                        <div class="char_icon"><i class="fas fa-truck"></i></div>
+                        <div>
+                            <div class="char_title">Free Delivery</div>
+                            <div class="char_subtitle">On all orders over $50</div>
+                        </div>
+                    </div>
+                    <div class="char_item">
+                        <div class="char_icon"><i class="fas fa-undo"></i></div>
+                        <div>
+                            <div class="char_title">Free 30-Day Returns</div>
+                            <div class="char_subtitle">Hassle-free guarantee</div>
+                        </div>
+                    </div>
+                    <div class="char_item">
+                        <div class="char_icon"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <div class="char_title">Secure Payment</div>
+                            <div class="char_subtitle">100% protected checkout</div>
+                        </div>
+                    </div>
+                    <div class="char_item">
+                        <div class="char_icon"><i class="fas fa-comments"></i></div>
+                        <div>
+                            <div class="char_title">24/7 Expert Support</div>
+                            <div class="char_subtitle">Dedicated technical help</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deals of the Week & Featured Tabs -->
+        <section class="section_padding">
+            <div class="container">
+                <div class="deals_row">
+                    <!-- Deals Card Column -->
+                    <div class="deals_card">
+                        <div class="deals_card_title">Deals of the Week</div>
+                        <div class="deals_img">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80" alt="Beoplay H7">
+                        </div>
+                        <div class="product_category">Bang & Olufsen</div>
+                        <div class="product_name"><a href="product_detail.html?id=2">Beoplay H7 Wireless Over-Ear Headphones</a></div>
+                        <div class="product_price_row my-2">
+                            <div class="price_now">$225 <span class="price_old">$300</span></div>
+                        </div>
+                        
+                        <!-- Countdown Box -->
+                        <div class="deals_timer_box">
+                            <div class="timer_unit">
+                                <span id="deals_hr" class="num">47</span>
+                                <span class="label">Hours</span>
+                            </div>
+                            <div class="timer_unit">
+                                <span id="deals_min" class="num">58</span>
+                                <span class="label">Mins</span>
+                            </div>
+                            <div class="timer_unit">
+                                <span id="deals_sec" class="num">12</span>
+                                <span class="label">Secs</span>
+                            </div>
+                        </div>
+                        
+                        <button onclick="addToCart(2)" class="btn_primary w-100 mt-3" style="width:100%;">Add To Cart</button>
+                    </div>
+
+                    <!-- Featured Tabbed Section -->
+                    <div>
+                        <div class="section_title_box">
+                            <h2 class="section_title">Popular Products</h2>
+                            <div class="tabs_list">
+                                <button class="tab_btn active" data-filter="all">All</button>
+                                <button class="tab_btn" data-filter="is-featured">Featured</button>
+                                <button class="tab_btn" data-filter="is-sale">On Sale</button>
+                                <button class="tab_btn" data-filter="is-best">Best Rated</button>
+                            </div>
+                        </div>
+
+                        <!-- Product Grid -->
+                        <div class="product_grid">
+                            <!-- Product 1 -->
+                            <div class="product_card is-featured is-sale is-best">
+                                <span class="badge_tag badge_discount">-8%</span>
+                                <div class="fav_btn" onclick="toggleWishlist(1, this)"><i class="fas fa-heart"></i></div>
+                                <div class="product_thumb"><a href="product_detail.html?id=1"><img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&auto=format&fit=crop&q=80" alt="iPhone 15 Pro"></a></div>
+                                <div class="product_category">Apple</div>
+                                <div class="product_name"><a href="product_detail.html?id=1">Apple iPhone 15 Pro Max 256GB Titanium</a></div>
+                                <div class="rating_box"><i class="fas fa-star"></i><span>4.9</span><span class="reviews_count">(142)</span></div>
+                                <div class="product_price_row">
+                                    <div><span class="price_now">$1199</span><span class="price_old">$1299</span></div>
+                                    <button class="btn_add_cart" onclick="addToCart(1)"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <!-- Product 2 -->
+                            <div class="product_card is-featured is-sale is-best">
+                                <span class="badge_tag badge_discount">-25%</span>
+                                <div class="fav_btn" onclick="toggleWishlist(2, this)"><i class="fas fa-heart"></i></div>
+                                <div class="product_thumb"><a href="product_detail.html?id=2"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80" alt="Beoplay H7"></a></div>
+                                <div class="product_category">Bang & Olufsen</div>
+                                <div class="product_name"><a href="product_detail.html?id=2">Beoplay H7 Wireless Over-Ear Headphones</a></div>
+                                <div class="rating_box"><i class="fas fa-star"></i><span>4.8</span><span class="reviews_count">(96)</span></div>
+                                <div class="product_price_row">
+                                    <div><span class="price_now">$225</span><span class="price_old">$300</span></div>
+                                    <button class="btn_add_cart" onclick="addToCart(2)"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <!-- Product 3 -->
+                            <div class="product_card is-featured is-best">
+                                <span class="badge_tag badge_new">NEW</span>
+                                <div class="fav_btn" onclick="toggleWishlist(3, this)"><i class="fas fa-heart"></i></div>
+                                <div class="product_thumb"><a href="product_detail.html?id=3"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=80" alt="Sony Alpha A7"></a></div>
+                                <div class="product_category">Sony</div>
+                                <div class="product_name"><a href="product_detail.html?id=3">Sony Alpha A7 IV Full-Frame Mirrorless Camera</a></div>
+                                <div class="rating_box"><i class="fas fa-star"></i><span>4.9</span><span class="reviews_count">(64)</span></div>
+                                <div class="product_price_row">
+                                    <div><span class="price_now">$2498</span><span class="price_old">$2699</span></div>
+                                    <button class="btn_add_cart" onclick="addToCart(3)"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                            <!-- Product 4 -->
+                            <div class="product_card is-featured is-sale is-best">
+                                <span class="badge_tag badge_discount">-8%</span>
+                                <div class="fav_btn" onclick="toggleWishlist(4, this)"><i class="fas fa-heart"></i></div>
+                                <div class="product_thumb"><a href="product_detail.html?id=4"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80" alt="MacBook Pro"></a></div>
+                                <div class="product_category">Apple</div>
+                                <div class="product_name"><a href="product_detail.html?id=4">Apple MacBook Pro 16" M3 Max 36GB / 1TB</a></div>
+                                <div class="rating_box"><i class="fas fa-star"></i><span>5.0</span><span class="reviews_count">(88)</span></div>
+                                <div class="product_price_row">
+                                    <div><span class="price_now">$3499</span><span class="price_old">$3799</span></div>
+                                    <button class="btn_add_cart" onclick="addToCart(4)"><i class="fas fa-cart-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_grid">
+                <div class="footer_col">
+                    <div class="logo mb-3"><a href="index.html" style="color:#fff;">One<span>Tech</span></a></div>
+                    <p style="margin-bottom:15px; max-width:320px;">Your #1 destination for cutting-edge smartphones, laptops, cameras, and premium audio equipment.</p>
+                    <p><i class="fas fa-headset me-2"></i> Got Questions? Call us 24/7</p>
+                    <h3 style="color:#0e8ce4; margin-top:5px;">+1 (800) 555-0199</h3>
+                </div>
+                <div class="footer_col">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wish List</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#">Returns / Exchange</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer_col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="shop.html?category=laptops">Computers & Laptops</a></li>
+                        <li><a href="shop.html?category=smartphones">Smartphones & Tablets</a></li>
+                        <li><a href="shop.html?category=cameras">Cameras & Photos</a></li>
+                        <li><a href="shop.html?category=audio">TV & Audio</a></li>
+                        <li><a href="shop.html?category=gadgets">Gadgets & Wearables</a></li>
+                    </ul>
+                </div>
+                <div class="footer_col">
+                    <h4>Store Info</h4>
+                    <ul>
+                        <li><a href="#">About OneTech</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <p>&copy; 2026 OneTech. All rights reserved. Powered by HTML5 & Vanilla JavaScript.</p>
+                <div>
+                    <i class="fab fa-cc-visa fa-2x me-2"></i>
+                    <i class="fab fa-cc-mastercard fa-2x me-2"></i>
+                    <i class="fab fa-cc-paypal fa-2x me-2"></i>
+                    <i class="fab fa-cc-apple-pay fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Data & Main Script -->
+    <script src="./data.js"></script>
+    <script src="./main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Catalog - OneTech</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast_container" class="flash-messages"></div>
+
+    <!-- Top Bar -->
+    <div class="top_bar">
+        <div class="container">
+            <div class="top_bar_content">
+                <div class="top_bar_contact">
+                    <div class="top_bar_item">
+                        <i class="fas fa-phone-alt"></i> +1 (800) 555-0199
+                    </div>
+                    <div class="top_bar_item">
+                        <i class="fas fa-envelope"></i> <a href="mailto:support@onetech.com">support@onetech.com</a>
+                    </div>
+                </div>
+                <div class="top_bar_user">
+                    <div class="top_bar_item">
+                        <i class="fas fa-globe"></i> English ($ USD)
+                    </div>
+                    <div class="top_bar_item">
+                        <i class="fas fa-user"></i> <a href="#">Sign In / Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Main -->
+    <header class="header_main">
+        <div class="container">
+            <div class="header_main_row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">One<span>Tech</span></a>
+                </div>
+
+                <!-- Search Form -->
+                <div class="header_search">
+                    <form action="shop.html" method="GET" class="header_search_form">
+                        <input type="search" name="q" class="header_search_input" placeholder="Search for smartphones, laptops, cameras...">
+                        <select name="category" class="search_category_select">
+                            <option value="">All Categories</option>
+                            <option value="smartphones">Smartphones & Tablets</option>
+                            <option value="laptops">Computers & Laptops</option>
+                            <option value="cameras">Cameras & Photos</option>
+                            <option value="audio">TV & Audio</option>
+                        </select>
+                        <button type="submit" class="header_search_btn"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+                <!-- Wishlist & Cart -->
+                <div class="header_right_icons">
+                    <div class="icon_box" onclick="window.location.href='shop.html'">
+                        <div class="icon_wrapper">
+                            <i class="far fa-heart"></i>
+                            <span id="wishlist_count" class="icon_badge">0</span>
+                        </div>
+                        <div>
+                            <div class="icon_text_label">Wishlist</div>
+                            <div class="icon_text_val">Saved</div>
+                        </div>
+                    </div>
+
+                    <div class="icon_box" onclick="window.location.href='cart.html'">
+                        <div class="icon_wrapper">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span id="cart_count" class="icon_badge">0</span>
+                        </div>
+                        <div>
+                            <div class="icon_text_label">Cart</div>
+                            <div id="cart_total_header" class="icon_text_val">$0.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main_nav">
+        <div class="container">
+            <div class="main_nav_row">
+                <!-- Categories Dropdown Menu -->
+                <div class="cat_menu_container">
+                    <div class="cat_menu_title">
+                        <i class="fas fa-bars"></i> Categories
+                    </div>
+                    <ul class="cat_menu"></ul>
+                </div>
+
+                <!-- Nav Links -->
+                <ul class="main_nav_links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="shop.html">Shop</a></li>
+                    <li><a href="shop.html?on_sale=true">Super Deals</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Body -->
+    <main>
+        <div class="container py-4">
+            <div style="font-size:14px; color:#64748b; margin-bottom:15px;">
+                <a href="index.html">Home</a> &gt; <span style="color:#0e8ce4; font-weight:600;">Shop Catalog</span>
+            </div>
+
+            <div class="shop_layout">
+                <!-- Sidebar Filters -->
+                <aside class="shop_sidebar">
+                    <div class="sidebar_widget">
+                        <h3 class="widget_title">Categories</h3>
+                        <ul class="widget_list">
+                            <li><a href="shop.html">All Categories</a></li>
+                            <li><a href="shop.html?category=laptops">Computers & Laptops</a></li>
+                            <li><a href="shop.html?category=smartphones">Smartphones & Tablets</a></li>
+                            <li><a href="shop.html?category=cameras">Cameras & Photos</a></li>
+                            <li><a href="shop.html?category=audio">TV & Audio</a></li>
+                            <li><a href="shop.html?category=gadgets">Gadgets & Wearables</a></li>
+                            <li><a href="shop.html?category=gaming">Video Games & Consoles</a></li>
+                            <li><a href="shop.html?category=accessories">Accessories</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar_widget">
+                        <h3 class="widget_title">Filter by Brand</h3>
+                        <ul class="widget_list">
+                            <li><a href="shop.html">All Brands</a></li>
+                            <li><a href="shop.html?brand=Apple">Apple</a></li>
+                            <li><a href="shop.html?brand=Samsung">Samsung</a></li>
+                            <li><a href="shop.html?brand=Sony">Sony</a></li>
+                            <li><a href="shop.html?brand=Huawei">Huawei</a></li>
+                            <li><a href="shop.html?brand=Lenovo">Lenovo</a></li>
+                            <li><a href="shop.html?brand=Canon">Canon</a></li>
+                            <li><a href="shop.html?brand=Bang %26 Olufsen">Bang & Olufsen</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Product Grid Main -->
+                <div>
+                    <div class="shop_toolbar">
+                        <div>Showing <strong id="shop_product_count">0</strong> Products</div>
+                        <form action="shop.html" method="GET" style="display:flex; align-items:center; gap:10px;">
+                            <label style="font-size:14px; font-weight:500;">Sort By:</label>
+                            <select name="sort" onchange="this.form.submit()" style="padding:6px 12px; border-radius:4px; border:1px solid #cbd5e1; outline:none;">
+                                <option value="popular">Most Popular</option>
+                                <option value="price_low">Price: Low to High</option>
+                                <option value="price_high">Price: High to Low</option>
+                                <option value="rating">Highest Rated</option>
+                            </select>
+                        </form>
+                    </div>
+
+                    <div id="shop_product_grid" class="product_grid"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_grid">
+                <div class="footer_col">
+                    <div class="logo mb-3"><a href="index.html" style="color:#fff;">One<span>Tech</span></a></div>
+                    <p style="margin-bottom:15px; max-width:320px;">Your #1 destination for cutting-edge smartphones, laptops, cameras, and premium audio equipment.</p>
+                    <p><i class="fas fa-headset me-2"></i> Got Questions? Call us 24/7</p>
+                    <h3 style="color:#0e8ce4; margin-top:5px;">+1 (800) 555-0199</h3>
+                </div>
+                <div class="footer_col">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wish List</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#">Returns / Exchange</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer_col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="shop.html?category=laptops">Computers & Laptops</a></li>
+                        <li><a href="shop.html?category=smartphones">Smartphones & Tablets</a></li>
+                        <li><a href="shop.html?category=cameras">Cameras & Photos</a></li>
+                        <li><a href="shop.html?category=audio">TV & Audio</a></li>
+                        <li><a href="shop.html?category=gadgets">Gadgets & Wearables</a></li>
+                    </ul>
+                </div>
+                <div class="footer_col">
+                    <h4>Store Info</h4>
+                    <ul>
+                        <li><a href="#">About OneTech</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <p>&copy; 2026 OneTech. All rights reserved. Powered by HTML5 & Vanilla JavaScript.</p>
+                <div>
+                    <i class="fab fa-cc-visa fa-2x me-2"></i>
+                    <i class="fab fa-cc-mastercard fa-2x me-2"></i>
+                    <i class="fab fa-cc-paypal fa-2x me-2"></i>
+                    <i class="fab fa-cc-apple-pay fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Data & Main Script -->
+    <script src="./data.js"></script>
+    <script src="./main.js" defer></script>
+</body>
+</html>
