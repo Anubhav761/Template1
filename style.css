@@ -950,11 +950,11 @@ img {
   }
 
   .header_search_form {
-    height: 44px;
+    height: 48px;
   }
 
   .search_category_select {
-    max-width: 112px;
+    max-width: 100px;
     padding: 0 6px;
     font-size: 12px;
   }
