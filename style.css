@@ -1067,4 +1067,12 @@ img {
     display: block;
     text-align: center;
   }
+
+  .sidebar_widget {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+  }
 }
