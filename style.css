@@ -154,7 +154,17 @@ ul {
     font-size: 14px;
     font-family: inherit;
 }
-
+.search_category_select {
+    height: 100%;
+    border: none;
+    border-left: 1px solid #e2e8f0;
+    background: #f8fafc;
+    padding: 0 15px;
+    font-size: 13px;
+    color: var(--text-color);
+    outline: none;
+    cursor: pointer;
+}
 .header_search_btn {
     width: 55px;
     height: 100%;
@@ -943,7 +953,9 @@ img {
     height: 44px;
   }
 
-
+  .search_category_select {
+    display: none;
+  }
 
   .header_search_btn {
     width: 48px;
