@@ -337,6 +337,23 @@ function initShopPage() {
     } else {
         shopContainer.innerHTML = filtered.map(renderProductCard).join('');
     }
+
+    // Set sort dropdown to current value
+    const sortSelect = document.getElementById('sort_select');
+    if (sortSelect) sortSelect.value = sort;
+}
+
+// Handle sort change while preserving other filters
+function handleSortChange() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const sortSelect = document.getElementById('sort_select');
+    const newSort = sortSelect.value;
+
+    // Update or add the sort parameter
+    urlParams.set('sort', newSort);
+
+    // Redirect with all parameters preserved
+    window.location.href = 'shop.html?' + urlParams.toString();
 }
 
 // --- Product Detail Page ---
