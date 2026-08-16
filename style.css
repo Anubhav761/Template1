@@ -957,6 +957,10 @@ img {
     display: none;
   }
 
+  .cat_menu_title {
+    display: none;
+  }
+
   .header_search_btn {
     width: 48px;
   }
